@@ -1,0 +1,5 @@
+BASE_URL: 'https://www.tutorialspoint.com/css/index.htm'
+CATEGORY: 'DevOps'
+SUB_CATEGORY: 'UNIX'
+EXPECTED_URL: 'https://www.tutorialspoint.com/unix/index.htm'
+EXPECTED_PAGE_TITLE: 'Linux/Unix Tutorial'
