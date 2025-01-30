@@ -27,7 +27,7 @@ public class BaseTest {
     @BeforeEach
     public void setUp() {
         Configuration.browserSize = "1920x1080";
-        Configuration.pageLoadTimeout = 60000;
+        Configuration.pageLoadStrategy="eager";
         Selenide.open(testData.BASE_URL);
     }
 }
