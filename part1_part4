@@ -1,0 +1,115 @@
+Part1
+Basic Functions of the Elevator System:
+Move Elevator
+Select Floor
+Door Operation
+Emergency Handling
+Elevator Capacity Check
+System Monitoring
+
+Test Decomposition Table:
+Function	  | Task	                                 | Transaction
+Move Elevator |	Elevator moves up/down based on command. | Positive: Elevator moves correctly to the selected floor.
+                                                         | Negative: Elevator doesn't move due to lack of power or malfunction.
+
+Select Floor | User presses a floor button to select the | Positive: User selects a floor, elevator moves to that floor.
+             | destination.	                             | Negative: Invalid floor selection (e.g., out of range or non-existent floor).
+
+Door         | Open/Close door functionality.            | Positive: Door opens and closes when requested.
+Operation    |                               	         | Negative: Door fails to open/close (e.g., due to obstruction).
+
+Emergency    | Emergency button activates elevator       | Positive: Emergency button triggers emergency stop or emergency mode.
+Handling	 | emergency response.                       | Negative: Emergency button doesn't work due to system malfunction.
+
+Elevator     | Ensure elevator doesn't exceed maximum    | Positive: Elevator capacity check allows passengers within the limit.
+Capacity     |  weight or number of passengers.          | Negative: Elevator exceeds capacity and prevents movement or triggers alarm.
+Check		 |                                           |
+
+System       | Monitor elevator status (e.g., current    | Positive: System accurately reflects the elevator's current status (floor, doors, etc.).
+Monitoring	 | floor, door status, etc.).	             | Negative: Monitoring system fails to provide real-time information.
+
+Explanation of the Test Decomposition:
+Move Elevator: The elevator’s movement should be verified to ensure it properly responds to user input. We test both a successful operation (positive) and a failure condition like system malfunction (negative).
+Select Floor: The ability to select a floor and have the elevator respond correctly is essential. A negative case is when an invalid floor (e.g., non-existent or out of range) is selected.
+Door Operation: Elevator doors should open and close correctly based on user commands. Negative testing can simulate issues like obstructions preventing the doors from closing.
+Emergency Handling: The elevator should stop and enter emergency mode when the emergency button is pressed. Negative testing ensures the system behaves correctly under fault conditions.
+Elevator Capacity Check: The system should be able to prevent overloads by checking the weight or passenger count. The negative scenario involves testing an overload, where the elevator should either not start or issue a warning.
+System Monitoring: Real-time monitoring ensures the elevator status (floor, door position, etc.) is visible. The negative case checks if the monitoring system fails to update or report the wrong status.
+
+Part4
+
+1. ls
+Purpose: Lists the contents of a directory.Example:
+ls
+This command displays the files and directories in the current working directory.
+
+2. cd
+Purpose: Changes the current working directory.Example:
+cd /home/user/Documents
+This command moves you to the /home/user/Documents directory.
+
+3. pwd
+Purpose: Prints the current working directory.Example:
+pwd
+Displays the full path of the current directory, for example /home/user/Documents.
+
+4. cp
+Purpose: Copies files or directories.Example:
+
+cp file.txt /home/user/backup/
+Copies file.txt to the /home/user/backup/ directory.
+
+5. mv
+Purpose: Moves or renames files or directories.Example:
+mv file.txt /home/user/backup/
+Moves file.txt to the /home/user/backup/ directory.
+
+6. rm
+Purpose: Removes (deletes) files or directories.Example:
+rm file.txt
+Deletes the file.txt from the current directory.
+
+7. mkdir
+Purpose: Creates a new directory.Example:
+mkdir new_directory
+Creates a new directory called new_directory in the current working directory.
+
+8. rmdir
+Purpose: Removes an empty directory.Example:
+rmdir old_directory
+Deletes the empty old_directory from the current working directory.
+
+9. cat
+Purpose: Concatenates and displays the contents of a file.Example:
+cat file.txt
+Displays the contents of file.txt.
+
+10. touch
+Purpose: Creates an empty file or updates the timestamp of an existing file.Example:
+touch newfile.txt
+Creates an empty file called newfile.txt if it doesn’t exist.
+
+11. grep
+Purpose: Searches for a specific pattern within a file.Example:
+grep "error" logfile.txt
+Searches for the word "error" in logfile.txt and displays matching lines.
+
+12. find
+Purpose: Searches for files and directories based on various criteria.Example:
+find /home/user -name "*.txt"
+Finds all .txt files in the /home/user directory and its subdirectories.
+
+13. chmod
+Purpose: Changes the permissions of a file or directory.Example:
+chmod 755 script.sh
+Changes the permissions of script.sh to rwxr-xr-x, allowing the owner to read, write, and execute, and others to read and execute.
+
+14. df
+Purpose: Displays disk space usage for file systems.Example:
+df -h
+Displays disk space usage in a human-readable format (-h), showing total, used, and available space for each mounted file system.
+
+15. top
+Purpose: Displays running processes in real-time and resource usage.Example:
+top
+Shows a dynamic list of processes, including CPU, memory, and disk usage in real-time.
